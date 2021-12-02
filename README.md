@@ -6,6 +6,8 @@
 - Pytorch: 1.0+
 
 ## Model
+![Model](https://user-images.githubusercontent.com/21326503/144397664-8223390c-85d9-485a-8e4e-0fc879865323.png)
+
 We offer the training process and model in multi_result_files/9b8290dd3f63cbafcd141ba21282c783.pkl.
 
 ## How to run

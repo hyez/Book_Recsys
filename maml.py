@@ -235,7 +235,8 @@ def run(args, num_workers=1, log_interval=100, verbose=True, save_path=None):
                 loss_after.append(loss_q.item())
                 y_true = [label.cpu().numpy().reshape(-1)]
                 y_pred = [logits_q.cpu().detach().numpy().reshape(-1)]
-                ndcg_after.append(ndcg_score(y_true, y_pred, k=topk))
+                # ndcg_after.append(ndcg_score(y_true, y_pred, k=topk))
+                ndcg_all.append(utils.ndcg_score(y_true[0], y_pred[0], k=topk))
                 mae_after.append(mean_absolute_error(y_true, y_pred))
 
                 x_all.append(x_qry[i].cpu().numpy())
@@ -369,7 +370,8 @@ def evaluate_test(args, model,  dataloader):
             y_pred_all.append(tmp[2].reshape(-1).tolist())
             # y_pred_all.append(binary_y_pred.reshape(-1).tolist())
             
-            ndcg_all.append(ndcg_score(y_true, y_pred, k=topk))
+            # ndcg_all.append(ndcg_score(y_true, y_pred, k=topk))
+            ndcg_all.append(utils.ndcg_score(y_true[0], y_pred[0], k=topk))
             mae_all.append(mean_absolute_error(y_true, y_pred))
             # accuracy_all.append(accuracy_score(y_true[0], binary_y_pred))
 
