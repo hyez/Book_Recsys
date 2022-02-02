@@ -7,21 +7,20 @@
 - Pytorch: 1.0+
 
 ## Model
-![Model](https://user-images.githubusercontent.com/21326503/144397664-8223390c-85d9-485a-8e4e-0fc879865323.png)
+<img width="1931" alt="Model" src="https://user-images.githubusercontent.com/21326503/152167939-30202625-b354-4980-a887-7c5459b67bc7.png">
 
-We offer the training process and model in multi_result_files/9b8290dd3f63cbafcd141ba21282c783.pkl.
 
 ## How to run
 
 ### Training
 ```python
-python3 maml.py
+python maml.py
 ```
 You can modify the detailed parameters according to the definition in maml.py.
 
 ### Testing
 ```python
-python3 maml.py --test
+python maml.py --test
 ```
 By default, you can directly add the test argument to test the model obtained from the same aruguments setting.
 ```python
